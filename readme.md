@@ -1,5 +1,5 @@
 Methylation Data Analysis Kit (minfi, methylumi, wateRmelon and illuminaio)
-
+* 486427=485512+65+850
 * Be sure it is Admin account
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE))
