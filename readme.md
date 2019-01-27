@@ -18,4 +18,8 @@ type1<-getProbeInfo(IlluminaHumanMethylation450kmanifest, type = "I")
 type2<-getProbeInfo(IlluminaHumanMethylation450kmanifest, type = "II")
 SnpI<-getProbeInfo(IlluminaHumanMethylation450kmanifest, type = "SnpI")
 SnpII<-getProbeInfo(IlluminaHumanMethylation450kmanifest, type = "SnpII")
+
+# dasen normalization
+# type I and type II backgrounds are equalized first
+# quantile normalizes methylated and unmethylated intensities separately, then calculates betas
 ```
