@@ -1,5 +1,6 @@
 Methylation Data Analysis Kit (minfi, methylumi, wateRmelon and illuminaio)
 
+* Be sure it is Admin account
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
