@@ -1,2 +1,1 @@
-Methylation Data Analysis Kit
-minfi   methylumi  wateRmelon  illuminaio
+Methylation Data Analysis Kit (minfi, methylumi, wateRmelon and illuminaio)
