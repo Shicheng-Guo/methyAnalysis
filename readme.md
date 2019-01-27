@@ -11,6 +11,13 @@ BiocManager::install("methylumi", version = "3.8")
 BiocManager::install("illuminaio", version = "3.8")
 BiocManager::install("minfi", version = "3.8")
 
+library("data.table")
+library("minfi")
+library("wateRmelon")
+library("methylumi")
+library("illuminaio")
+library("ENmix")
+
 # control probes=850
 require(IlluminaHumanMethylation450kmanifest)
 control<-getProbeInfo(IlluminaHumanMethylation450kmanifest, type = "Control")
@@ -22,4 +29,10 @@ SnpII<-getProbeInfo(IlluminaHumanMethylation450kmanifest, type = "SnpII")
 # dasen normalization
 # type I and type II backgrounds are equalized first
 # quantile normalizes methylated and unmethylated intensities separately, then calculates betas
+
+RG.raw <- read.450k.exp(base = slide.folder, targets = files.table)
+methyl.norm <- preprocessIllumina(RG.raw, bg.correct = TRUE, normalize = "controls")
+beta.table <- getBeta(methyl.norm)
+
+
 ```
